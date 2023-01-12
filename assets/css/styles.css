@@ -1,8 +1,7 @@
 /* Les polices*/
 @font-face{
     font-family: 'Raleway';
-    src: url(assets/fonts/Raleway-VariableFont_wght.tffmap.wght.wght.wght);
-    src: url(assets/fonts/Raleway-Italic-VariableFont_wght.tff);
+    src: url(../fonts/Raleway-VariableFont_wght.ttf);
 }
 
 /* Elements principaux de la page */
@@ -338,12 +337,10 @@ footer div ul{
 }
 
 
-@media (max-width: 992px) and (min-width: 600px){
+@media (max-width: 992px){
 
     .centre{
-        display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
 
     .hebergement_marseille, .populaire{
@@ -353,7 +350,6 @@ footer div ul{
 
     .populaire{
         height: 36%;
-        display: flex;
         justify-content: space-around;
         flex-direction: column;
     }
@@ -384,28 +380,70 @@ footer div ul{
 
 }
 
-@media (max-width: 400px) and (min-width: 600px){
+@media (max-width: 768px){
 
+    header, footer, main{
+        margin: 0;
+    }
 
     header{
-        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #logo{
+        width: 100%;
+        display:flex ;
+        justify-content: center;
+    }
+
+    nav a:hover{
+        color: #0065fc;
+        border-bottom:#0065fc solid;
+        border-top: none;   
+    }
+
+    .centre{
+        flex-direction: column-reverse;
+    }
+
+    .populaire, .hebergement_marseille{
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .hebergement_marseille{
+        background: transparent;
+    }
+
+    .cards, .cartes_populaire, .cards_activite
+    {
         flex-direction: column;
     }
 
-    main, footer, header{
-        margin:0;
-    }
-      
-    #filtre{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
+    .activite_marseille{
+        margin-top: 230%;
     }
 
-    footer{
-        height: 10px;
-        display: flex;
-       /* flex-direction: column; */
+    .card_activite{
+        width: 100%;
+        height: 190px;
+        justify-content: space-between;
     }
 
+    .card_activite img{
+        width: 100%;
+        height: 134px;
+    }
+
+    .carte_populaire,.card, .card_activite{
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 500px;
+        margin-top: 80px;
+    }
 }
